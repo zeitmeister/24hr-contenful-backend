@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 app.post('/contentful-webhook', (req, res) => {
   const payload = req.body;
